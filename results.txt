@@ -1,0 +1,35 @@
+Abdullahi Nur
+anur@bu.edu
+
+puzzles with 5-move optimal solutions
+-------------------------------------
+algorithm                num. solved    avg. moves    avg. states tested
+------------------------------------------------------------------------
+random			    10	      5.2 moves	      188.8 states
+BFS			    10	      5.0 moves        47.1 states
+DFS (depth limit 20) 	    10        16.2 moves      19072.7 states
+DFS (depth limit 50)	    10	      48.2 moves      49043.0 states
+Greedy Search (using h1)	    10	        5.4 moves       70.4 states
+A* (using h1)		    10 	       5.0 moves        6.7 states
+
+
+Random seems to subpar, it works but it can definitely be more efficient. BFS with a. Depth limit of -1 is a lot better but it to could be more optimal. DFS with a depth limit of 20 and 50 are the worse performers because they require a. Lot more moves, time and states tested to find a solution compared to the rest. Greedy search w/ a h1 depth limit is just as practical as BFS if not slightly worse. A* with a h1 depth limit is the best performer and results in the most optimal solution for the puzzle.
+
+heuristic h2
+------------
+This heuristic returns the sum of the # of tiles in wrong row and the # of tiles in wrong col. If a tile is in the wrong row it adds 1, if its in the wrong col it adds 1. If its in both the wrong row and col it adds 2
+
+
+puzzles with 18-move optimal solutions
+--------------------------------------
+algorithm              num. solved    avg. moves    avg. states tested
+----------------------------------------------------------------------
+Greedy (heuristic h1)	 9     85.66666666666667   3358.8888888888887 states. //had to cancel
+Greedy (heuristic h2)	 10	    76.2 moves 	     725.7 states
+# Greedy with any other heuristics
+
+A* (heuristic h1)	 10	    18.0 moves        1861.7 states
+A* (heuristic h2)	 15	    18.0 moves.        239.3 states
+# Greedy with any other heuristics
+
+Greedy with the first heuristic is not very practical and takes way to long to run I had to stope the run. Greedy with h2 is practical in terms of both speed and accuracy but not the most optimal. A* with the h1 is subpar, just behind Greedy with the h2. A* with h2 was the most optimal by far, It resulted in the most efficient result in the fastest amount of time.
